@@ -20,8 +20,7 @@ public class UserResourse {
 	private UserServices service;
 	
      @GetMapping
-	public ResponseEntity<List> findAll() {
-    	 
+	public ResponseEntity<List<User>> findAll() {
 		List<User> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 	}
